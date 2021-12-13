@@ -45,7 +45,7 @@ Le contenu du corps du message est décrit par son Content-Type qui permet aux a
 ### Représentation de la pièce jointe dans le corps EML
 Le corps EML contient des limites pour chaque type de contenu qu'il contient. La pièce jointe dans le corps du message est identifiée par son Content-Type et Content-Disposition, comme illustré dans l'exemple suivant :
 
-Type de contenu : text/plain ; jeu de caractères#« windows-1252 » ; name#“apple app store.txt” Content-Disposition : pièce jointe ; nom de fichier # "apple app store.txt" Content-Transfer-Encoding: base64 X-Attachment-Id: f_jkhztmd02
+Content-Type: text/plain; charset#“windows-1252”; name#“apple app store.txt” Content-Disposition: attachment; filename#“apple app store.txt” Content-Transfer-Encoding: base64 X-Attachment-Id: f_jkhztmd02
 
 Comme on peut le voir, le Content-Disposition défini sur pièce jointe permet aux applications de lecture d'obtenir des informations sur les pièces jointes telles que le nom du fichier de pièce jointe et l'encodage de transfert. Les informations d'en-tête de la pièce jointe sont suivies du contenu codé de la pièce jointe qui doit être lu.
 #### Exemple de feuille de calcul en pièce jointe
