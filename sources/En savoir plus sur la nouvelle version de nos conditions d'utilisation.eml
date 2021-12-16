@@ -1,0 +1,303 @@
+Delivered-To: osmopoli8@gmail.com
+Received: by 2002:a6b:dd10:0:0:0:0:0 with SMTP id f16csp11057958ioc;
+        Wed, 24 Nov 2021 14:21:12 -0800 (PST)
+X-Received: by 2002:a05:6638:d0e:: with SMTP id q14mr21179524jaj.12.1637792472102;
+        Wed, 24 Nov 2021 14:21:12 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1637792472; cv=none;
+        d=google.com; s=arc-20160816;
+        b=WWLuaipRm1Yru3a/DEUokXF9EZjqTxRVMhFG5lR3uzmdu1pG3qk7lSCzxhvyGV7b7/
+         DjHghE2DXVbQYo/1mnz/3EXr50qyU2zyhZPHFUYNkOMwkKNKiNNqMXa+zb8HppqdNYA/
+         2xHFkR6cC9P0deqAoY1s3ty9DZx5p/lJJkLzBYghNOonmCeDfnCKe4mwxOrb3WSDWfiv
+         Gu60uCuv+0tcSW/2aComgvl6CcCFy/5t1S4tHnVrAC+HS+wnoph8hlOlFt2mrJ+J6MEK
+         Ux5DQMOi5zSmFZQpgBa+CuqJZ5Xlpqs0S98tV7006BUl4JZl3tRbL7PL0f/H7cZU00Y/
+         7STw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:from:subject:message-id:feedback-id:reply-to:date:mime-version
+         :dkim-signature;
+        bh=bQWl2LAkkJnMWcRl9VFiTVw0QRLr/jWUW1Y3VdokXSk=;
+        b=XLjkgQV3Wfm+PvbfFvkl2WS0QbLMr6ZkGJgbqpGPxJ8Gv0YtbrgbWKvP0rFA1HnZ7o
+         kWEsYa5WDQ+C+PBSjvLimkEGsQ7Cz79phl9EDM0rqz5Hyaz6JYNZ0FvBDaZiML4vYL85
+         2dVZbDGAVxiOh8ellfqaOViO71E6gxl6M0wyxbmIjtLLrQ6y+0ffpbefcpK1j1NYdjg4
+         8q8OQN97mqq8dww8N2dA0Jq5Ouu1Bw3IyLHBan1E1HTwjgR3HQTa1S16nzKmtNBDs9QW
+         spLNDMm7iU6JRsKVNPtRb2THwRwjef1SWfdALhtRV2G9ZcOLx9+rSNYyCvhuYDGHtK3V
+         8Img==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20210112 header.b=JvpvyM0l;
+       spf=pass (google.com: domain of 317qeyqwkcdojknalhu-qpkockkcha.8kikoiklkheeci6eh.8ki@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=317qeYQwKCdoJKNALHU-QPKOCKKCHA.8KIKOIKLKHEeCI6EH.8KI@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+Return-Path: <317qeYQwKCdoJKNALHU-QPKOCKKCHA.8KIKOIKLKHEeCI6EH.8KI@scoutcamp.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id k21sor1558115iow.34.2021.11.24.14.21.11
+        for <osmopoli8@gmail.com>
+        (Google Transport Security);
+        Wed, 24 Nov 2021 14:21:12 -0800 (PST)
+Received-SPF: pass (google.com: domain of 317qeyqwkcdojknalhu-qpkockkcha.8kikoiklkheeci6eh.8ki@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20210112 header.b=JvpvyM0l;
+       spf=pass (google.com: domain of 317qeyqwkcdojknalhu-qpkockkcha.8kikoiklkheeci6eh.8ki@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=317qeYQwKCdoJKNALHU-QPKOCKKCHA.8KIKOIKLKHEeCI6EH.8KI@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20210112;
+        h=mime-version:date:reply-to:feedback-id:message-id:subject:from:to;
+        bh=bQWl2LAkkJnMWcRl9VFiTVw0QRLr/jWUW1Y3VdokXSk=;
+        b=JvpvyM0lp1AwOgRA6R5RPWbS75c7M2tKnWV5tP53ElcjrqYnxkJ22MyYjxWbQE5zNU
+         xoDiUkJhqPrDOIn7jTfKbavDrCVxUhsqNn6dzWV3+XWvfQBp5Q4ZFZOPNBqc2rqGP7eQ
+         X+NLeJg4xGoVxZJFg786YaL5dTiU7IQBVj46Qd3ZqCg+flEkBzDP286JXk5xuyKO6ypF
+         NZEcugKBCNelNpnBa0ocE1ILmZ1tHhx7uhMjVXq6rAiHE2c+3OEMoVU1uWTU52RgVa6q
+         uF2KRpzIhW0HJlJmTPLp8LGK5kjeQ0C0pl2pkKdfwFyVlctE5e8qcZiak5elwBxdHHEc
+         v/uA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112;
+        h=x-gm-message-state:mime-version:date:reply-to:feedback-id
+         :message-id:subject:from:to;
+        bh=bQWl2LAkkJnMWcRl9VFiTVw0QRLr/jWUW1Y3VdokXSk=;
+        b=7L4JPNQBc3IHny/6HfieIqDeATyjYo58YYQyYQ4t1YQ3qXUhgiXqrhzFF34R6SZidw
+         rxRBWARQkKAUwECK9YGdxoypPtUvnKcRG3ZodsvgXYJTJ5m8grZF/xr3AJ5qADWKy1+H
+         vMH3Kt8stNgB7Ze1xjP8JnlL0oUfzGexMrNSbvOc+SrhGArM8xrB3QmGPAIXdYhRtFFX
+         Mf/YfvCjsT1xtT0ok8ZQygeysPMf3gOXZ3X5DlvP3/Zee6V8whuH0MISe4IyjgzDpuUl
+         BjGjUZR8DvZrhu7AuzfhODidzAVe8Ey2EJxOoVymPRyhhJAj7fgxnZ3SlUBS9AsacSP0
+         S0Ag==
+X-Gm-Message-State: AOAM530QBt0fdbEtw7Cz5c8e7E6yBoVf5TeW2fj0QQc7Ch5pd0h7tHwr
+	KR5ka+GRbAMS3gykUV/h8zuK
+X-Google-Smtp-Source: ABdhPJwI1NO4/ugujV8hFmux+Y8ndNqqP4O6X5bkXqNzKPjFJwPdNaZhw2pkDejRSHVMU6sTBuLYsCg=
+MIME-Version: 1.0
+X-Received: by 2002:a05:6602:2a42:: with SMTP id k2mr19053675iov.97.1637792471823;
+ Wed, 24 Nov 2021 14:21:11 -0800 (PST)
+Date: Wed, 24 Nov 2021 14:21:11 -0800
+Reply-To: Google <noreply-utos@google.com>
+X-Google-Id: 4114483
+Feedback-ID: P2725-0:C20183499:M110496615-fr:gamma
+X-Notifications: GAMMA:<3b6d92a727ae06f4a198614d3566168b96b7c453-20183499-111045282@google.com>
+X-Notifications-Bounce-Info: AXvZQxdpNVAgA0ANdY5CkxhrblsJVYM4TXCrSJSBXtyvbPwUPqB0Vei64M_WrK3w-drHoi7F5lAWhbLchDncmW7DasL4OkABz88jNim82h2y-vtpnrQw8Ssvus2hDIN5wNDqvYtp5pAXrDIrI6OoPKPxZpBpLGfDuuLRYsw3DRUlxpsL0HQRPeI7f3UrpP2UECNaUniU4S9nIrbsD2FU1X26fOLZBiIXusyjnG3SKokhNUuRd4EmI9i4s5Gcc9y7O0lDVdQNjAwNjA0MDQxNTM1NTk2OTMzMg
+Message-ID: <3b6d92a727ae06f4a198614d3566168b96b7c453-20183499-111045282@google.com>
+Subject: En savoir plus sur la nouvelle version de nos conditions d'utilisation
+From: Google <noreply-utos@google.com>
+To: osmopoli8@gmail.com
+Content-Type: multipart/alternative; boundary="0000000000007fb3b105d190469a"
+
+--0000000000007fb3b105d190469a
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+b3Ntb3BvbGk4QGdtYWlsLmNvbQ0KDQrDgCBjb21wdGVyIGR1IDUgamFudmllciAyMDIyLCB1bmUg
+bm91dmVsbGUgdmVyc2lvbiBkZSBub3MgY29uZGl0aW9ucw0KZCd1dGlsaXNhdGlvbiBlbnRyZXJh
+IGVuIHZpZ3VldXIuIENlcyBtb2RpZmljYXRpb25zIG4nYXVyb250IGF1Y3VuZQ0KaW5jaWRlbmNl
+IHN1ciBsYSBmYcOnb24gZG9udCB2b3VzIHV0aWxpc2V6IGxlcyBzZXJ2aWNlcyBHb29nbGUsIG1h
+aXMgZWxsZXMNCnZvdXMgYWlkZXJvbnQgw6AgbWlldXggY29tcHJlbmRyZSBjZSBxdWUgdm91cyBl
+dCBHb29nbGUgcG91dmV6IGF0dGVuZHJlIGwndW4NCmRlIGwnYXV0cmUgbG9yc3F1ZSB2b3VzIHV0
+aWxpc2V6IGNlcyBzZXJ2aWNlcy4NCg0KVm91cyBwb3V2ZXogY29uc3VsdGVyIGxlcyBub3V2ZWxs
+ZXMgY29uZGl0aW9ucyBkJ3V0aWxpc2F0aW9uIHN1ciBjZXR0ZSBwYWdlDQo8aHR0cHM6Ly9hY2Nv
+dW50cy5nb29nbGUuY29tL0FjY291bnRDaG9vc2VyP0VtYWlsPW9zbW9wb2xpOEBnbWFpbC5jb20m
+Y29udGludWU9aHR0cHM6Ly9wb2xpY2llcy5nb29nbGUuY29tL3Rlcm1zL3VwZGF0ZSUzRnV0bV9z
+b3VyY2UlM0R0b3MyMDIyLWVtYWlsJTI2dXRtX21lZGl1bSUzRGVtYWlsPi4NCk5vdXMgZm91cm5p
+c3NvbnMgw6lnYWxlbWVudCB1biByw6lzdW3DqSBkZXMgcHJpbmNpcGFsZXMgbW9kaWZpY2F0aW9u
+cw0KPGh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbS9BY2NvdW50Q2hvb3Nlcj9FbWFpbD1vc21v
+cG9saThAZ21haWwuY29tJmNvbnRpbnVlPWh0dHBzOi8vcG9saWNpZXMuZ29vZ2xlLmNvbS90ZXJt
+cy9jaGFuZ2VzJTNGdXRtX3NvdXJjZSUzRHRvczIwMjItZW1haWwlMjZ1dG1fbWVkaXVtJTNEZW1h
+aWw+Lg0KVm9pY2kgZW4gYnJlZiBjZSBxdWUgY2VsYSBjaGFuZ2UgcG91ciB2b3VzIDoNCg0KICAg
+IC0gKkRlc2NyaXB0aW9uIHBsdXMgY2xhaXJlIGRlIGNlIHF1ZSB2b3VzIHBvdXZleiBhdHRlbmRy
+ZSBkZSBHb29nbGUgZXQNCiAgICBkZSBjZSBxdWUgbm91cyBhdHRlbmRvbnMgZGUgdm90cmUgcGFy
+dCogOiBub3VzIGRvbm5vbnMgZGVzIGV4ZW1wbGVzDQogICAgc3VwcGzDqW1lbnRhaXJlcyBkw6lj
+cml2YW50IGxlIHJlc3BlY3QgbXV0dWVsIHF1ZSBub3VzIGF0dGVuZG9ucyBkZSB0b3VzICANCmxl
+cw0KICAgIHV0aWxpc2F0ZXVycy4gTm91cyBmYWlzb25zIMOpZ2FsZW1lbnQgcHJldXZlIGQndW5l
+IHBsdXMgZ3JhbmRlICANCnRyYW5zcGFyZW5jZQ0KICAgIGNvbmNlcm5hbnQgbGUgZMOpdmVsb3Bw
+ZW1lbnQsIGwnYW3DqWxpb3JhdGlvbiBldCBsYSBtaXNlIMOgIGpvdXIgZGUgbm9zDQogICAgY29u
+dGVudXMgbnVtw6lyaXF1ZXMgZXQgZGUgbm9zIGJpZW5zIGV0IHNlcnZpY2VzLiDDgCBjZSB0aXRy
+ZSwgbm91cyAgDQpkw6ljcml2b25zDQogICAgcGx1cyBlbiBkw6l0YWlsIGxlcyByYWlzb25zIHBv
+dXIgbGVzcXVlbGxlcyBub3VzIGFwcG9ydG9ucyBkZXMgIA0KbW9kaWZpY2F0aW9ucw0KICAgIGV0
+IGVmZmVjdHVvbnMgZGVzIG1pc2VzIMOgIGpvdXIgZMOpY291bGFudCBkJ29ibGlnYXRpb25zIGzD
+qWdhbGVzLCBsZSAgDQpwcsOpYXZpcw0KICAgIHF1ZSBub3VzIHZvdXMgYWRyZXNzb25zIGV0IHZv
+dHJlIGRyb2l0IGRlIHZvdXMgcsOpdHJhY3RlciBkdSBjb250cmF0IHF1ZQ0KICAgIHZvdXMgYXZl
+eiBjb25jbHUgYXZlYyBub3VzLg0KICAgIC0gKkdhcmFudGllIGzDqWdhbGUqIDogbm91cyBmb3Vy
+bmlzc29ucyB1biByw6lzdW3DqSBkZXMgZ2FyYW50aWVzIGzDqWdhbGVzDQogICAgZG9udCB2b3Vz
+IGLDqW7DqWZpY2lleiBlbiB2ZXJ0dSBkZXMgbG9pcyBkZSBwcm90ZWN0aW9uIGRlcyBjb25zb21t
+YXRldXJzIGRlDQogICAgbCdFRUUgbG9yc3F1ZSB2b3VzIHV0aWxpc2V6IG5vcyBjb250ZW51cyBu
+dW3DqXJpcXVlcyBldCBub3MgYmllbnMgZXQNCiAgICBzZXJ2aWNlcy4NCiAgICAtICpEcm9pdCBk
+ZSByw6l0cmFjdGF0aW9uKiA6IG5vdXMgdm91cyBmb3Vybmlzc29ucyBkZXMgaW5mb3JtYXRpb25z
+DQogICAgY29uY2VybmFudCB2b3RyZSBkcm9pdCBsw6lnYWwgZGUgdm91cyByw6l0cmFjdGVyIGRl
+cyBjb25kaXRpb25zICANCmQndXRpbGlzYXRpb24NCiAgICBkYW5zIGxlcyAxNCBqb3VycyBxdWkg
+c3VpdmVudCBsZXVyIGFjY2VwdGF0aW9uLCBzaSB2b3VzIMOqdGVzIHVuDQogICAgY29uc29tbWF0
+ZXVyIGJhc8OpIGRhbnMgbCdFc3BhY2Ugw6ljb25vbWlxdWUgZXVyb3DDqWVuIChFRUUpLiBOb3Vz
+IGluY2x1b25zDQogICAgw6lnYWxlbWVudCB1bmUgY29waWUgZGVzICJJbmZvcm1hdGlvbnMgc3Rh
+bmRhcmRpc8OpZXMgc3VyIGxhIHLDqXRyYWN0YXRpb24iICANCmRlDQogICAgbCdVRSwgYXUgY2Fz
+IG/DuSB2b3VzIHNvdWhhaXRlcmlleiBleGVyY2VyIGNlIGRyb2l0Lg0KICAgIC0gKkTDqWZpbml0
+aW9ucyBzdXBwbMOpbWVudGFpcmVzKiA6IG5vdXMgYXZvbnMgYWpvdXTDqSBkZXMgZXhwbGljYXRp
+b25zDQogICAgcG91ciB2b3VzIGFpZGVyIMOgIGNvbXByZW5kcmUgY2VydGFpbnMgY29uY2VwdHMg
+anVyaWRpcXVlcyBhdXhxdWVscyBub3VzDQogICAgZmFpc29ucyByw6lmw6lyZW5jZSBkYW5zIG5v
+cyBjb25kaXRpb25zIGQndXRpbGlzYXRpb24sIHkgY29tcHJpcyBsZXMgIA0Kbm90aW9ucw0KICAg
+IGRlICJnYXJhbnRpZSBjb21tZXJjaWFsZSIsIGRlICJnYXJhbnRpZSBsw6lnYWxlIiBldCBkZSAi
+ZMOpZmF1dCBkZQ0KICAgIGNvbmZvcm1pdMOpIi4NCiAgICAtICpNZWlsbGV1cmUgbGlzaWJpbGl0
+w6kqIDogbm9zIGNvbmRpdGlvbnMgZCd1dGlsaXNhdGlvbiByZXN0ZW50IHVuDQogICAgZG9jdW1l
+bnQganVyaWRpcXVlLCBtYWlzIG5vdXMgYXZvbnMgZmFpdCBub3RyZSBwb3NzaWJsZSBwb3VyIGVu
+IGZhY2lsaXRlcg0KICAgIGxhIGNvbXByw6loZW5zaW9uIChwYXIgZXhlbXBsZSwgZW4gcsOpb3Jn
+YW5pc2FudCBjZXJ0YWlucyB0aMOobWVzIHBvdXIgIA0KcXUnaWxzDQogICAgc29pZW50IHBsdXMg
+ZmFjaWxlcyDDoCB0cm91dmVyKS4NCg0KU2kgdm91cyB1dGlsaXNleiBGYW1pbHkgTGluayBwb3Vy
+IGfDqXJlciBsZSBjb21wdGUgR29vZ2xlIGQndW4gYXV0cmUNCnV0aWxpc2F0ZXVyLCBwcmVuZXog
+bGUgdGVtcHMgZGUgbHVpIHBhcmxlciBkZSBjZXMgY2hhbmdlbWVudHMuDQoNCk1lcmNpIGQnYXZv
+aXIgY2hvaXNpIEdvb2dsZSAhDQoNCkdvb2dsZSBJcmVsYW5kIExpbWl0ZWQsIEdvcmRvbiBIb3Vz
+ZSwgQmFycm93IFN0cmVldCwgRHVibGluIDQsIElybGFuZGUNCg0KTm91cyB2b3VzIGF2b25zIGFk
+cmVzc8OpIGNldCBlLW1haWwgcG91ciB2b3VzIGluZm9ybWVyIGRlIG1vZGlmaWNhdGlvbnMNCmlt
+cG9ydGFudGVzIGFwcG9ydMOpZXMgYXV4IGNvbmRpdGlvbnMgZCd1dGlsaXNhdGlvbiBkZSBHb29n
+bGUuDQo=
+--0000000000007fb3b105d190469a
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html lang=3Dfr>
+<head>
+<meta name=3Dformat-detection content=3Demail=3Dno>
+<meta name=3Dformat-detection content=3Ddate=3Dno>
+<meta http-equiv=3DContent-Type content=3D"text/html; charset=3Dutf-8"><sty=
+le type=3Dtext/css>
+body {font-family:Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;colo=
+r:#5f6368;line-height:1.5;font-size:16px} li, p {margin:25px 0}@media scree=
+n and (min-width: 600px) {.v2sp {padding: 6px 30px 0;} .v2rsp {padding: 0 1=
+0px;}} @media screen and (min-width: 600px) {.mdv2rw {padding: 40px 40px;}}=
+=20
+</style>
+<link type=3Dtext/css href=3D//fonts.googleapis.com/css?family=3DGoogle+San=
+s_old rel=3Dstylesheet>
+<title></title>
+</head>
+<body style=3D"margin: 0; padding: 0;" bgcolor=3D#FAFAFA>
+<table width=3D100% height=3D100% style=3D"min-width: 348px;" border=3D0 ce=
+llspacing=3D0 cellpadding=3D0 lang=3Dfr bgcolor=3D#FAFAFA role=3Dpresentati=
+on>
+<tr align=3Dcenter>
+<td>
+<table width=3D100% cellspacing=3D0 cellpadding=3D0 bgcolor=3D#FAFAFA style=
+=3Dmax-width:600px role=3Dpresentation>
+<tr>
+<td style=3Dpadding-top:20px;padding-bottom:20px;padding-left:40px;padding-=
+right:40px>
+<table width=3D100% cellspacing=3D0 cellpadding=3D0 role=3Dpresentation>
+<tr>
+<td><img src=3Dhttps://www.gstatic.com/images/branding/googlelogo/1x/google=
+logo_color_112x36dp.png alt=3D"" title=3D""></td>
+<td align=3Dright style=3D"text-align: end;"><a href=3D# style=3Dtext-decor=
+ation:none;color:#5f6368>osmopoli8@gmail.com</a></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style=3Dpadding-left:15px;padding-right:15px>
+<table width=3D100% cellspacing=3D0 cellpadding=3D0 role=3Dpresentation>
+<tr>
+<td bgcolor=3D#ffffff style=3D"padding:35px 35px 10px 35px;border-radius:4p=
+x">
+<table border=3D0 cellspacing=3D0 cellpadding=3D0 role=3Dpresentation>
+<tr>
+<td align=3Dcenter><img src=3Dhttps://www.gstatic.com/s2/oz/images/notifica=
+tions/ppemail/privacy_header_2x.png alt=3D"" width=3D150 title=3D"" role=3D=
+presentation></td>
+</tr>
+<tr>
+<td>
+<p style=3D"margin:25px 0;font-family:Roboto, Helvetica Neue, Helvetica, Ar=
+ial, sans-serif;color:#5f6368;line-height:1.5;font-size:16px">=C3=80 compte=
+r du 5 janvier 2022, une nouvelle version de nos conditions d'utilisation e=
+ntrera en vigueur. Ces modifications n'auront aucune incidence sur la fa=C3=
+=A7on dont vous utilisez les services Google, mais elles vous aideront =C3=
+=A0 mieux comprendre ce que vous et Google pouvez attendre l'un de l'autre =
+lorsque vous utilisez ces services.</p>
+<p style=3D"margin:25px 0;font-family:Roboto, Helvetica Neue, Helvetica, Ar=
+ial, sans-serif;color:#5f6368;line-height:1.5;font-size:16px">Vous pouvez c=
+onsulter les nouvelles conditions d'utilisation sur <a href=3Dhttps://accou=
+nts.google.com/AccountChooser?Email=3Dosmopoli8@gmail.com&amp;continue=3Dht=
+tps://policies.google.com/terms/update%3Futm_source%3Dtos2022-email%26utm_m=
+edium%3Demail>cette page</a>. Nous fournissons =C3=A9galement un <a href=3D=
+https://accounts.google.com/AccountChooser?Email=3Dosmopoli8@gmail.com&amp;=
+continue=3Dhttps://policies.google.com/terms/changes%3Futm_source%3Dtos2022=
+-email%26utm_medium%3Demail>r=C3=A9sum=C3=A9 des principales modifications<=
+/a>. Voici en bref ce que cela change pour vous&nbsp;:</p>
+<ul>
+<li style=3D"margin:25px 0;font-family:Roboto, Helvetica Neue, Helvetica, A=
+rial, sans-serif;color:#5f6368;line-height:1.5;font-size:16px"><b>Descripti=
+on plus claire de ce que vous pouvez attendre de Google et de ce que nous a=
+ttendons de votre part</b>&nbsp;: nous donnons des exemples suppl=C3=A9ment=
+aires d=C3=A9crivant le respect mutuel que nous attendons de tous les utili=
+sateurs. Nous faisons =C3=A9galement preuve d'une plus grande transparence =
+concernant le d=C3=A9veloppement, l'am=C3=A9lioration et la mise =C3=A0 jou=
+r de nos contenus num=C3=A9riques et de nos biens et services. =C3=80 ce ti=
+tre, nous d=C3=A9crivons plus en d=C3=A9tail les raisons pour lesquelles no=
+us apportons des modifications et effectuons des mises =C3=A0 jour d=C3=A9c=
+oulant d'obligations l=C3=A9gales, le pr=C3=A9avis que nous vous adressons =
+et votre droit de vous r=C3=A9tracter du contrat que vous avez conclu avec =
+nous.</li>
+<li style=3D"margin:25px 0;font-family:Roboto, Helvetica Neue, Helvetica, A=
+rial, sans-serif;color:#5f6368;line-height:1.5;font-size:16px"><b>Garantie =
+l=C3=A9gale</b>&nbsp;: nous fournissons un r=C3=A9sum=C3=A9 des garanties l=
+=C3=A9gales dont vous b=C3=A9n=C3=A9ficiez en vertu des lois de protection =
+des consommateurs de l'EEE lorsque vous utilisez nos contenus num=C3=A9riqu=
+es et nos biens et services.</li>
+<li style=3D"margin:25px 0;font-family:Roboto, Helvetica Neue, Helvetica, A=
+rial, sans-serif;color:#5f6368;line-height:1.5;font-size:16px"><b>Droit de =
+r=C3=A9tractation</b>&nbsp;: nous vous fournissons des informations concern=
+ant votre droit l=C3=A9gal de vous r=C3=A9tracter des conditions d'utilisat=
+ion dans les 14&nbsp;jours qui suivent leur acceptation, si vous =C3=AAtes =
+un consommateur bas=C3=A9 dans l'Espace =C3=A9conomique europ=C3=A9en (EEE)=
+. Nous incluons =C3=A9galement une copie des "Informations standardis=C3=A9=
+es sur la r=C3=A9tractation" de l'UE, au cas o=C3=B9 vous souhaiteriez exer=
+cer ce droit.</li>
+<li style=3D"margin:25px 0;font-family:Roboto, Helvetica Neue, Helvetica, A=
+rial, sans-serif;color:#5f6368;line-height:1.5;font-size:16px"><b>D=C3=A9fi=
+nitions suppl=C3=A9mentaires</b>&nbsp;: nous avons ajout=C3=A9 des explicat=
+ions pour vous aider =C3=A0 comprendre certains concepts juridiques auxquel=
+s nous faisons r=C3=A9f=C3=A9rence dans nos conditions d'utilisation, y com=
+pris les notions de "garantie commerciale", de "garantie l=C3=A9gale" et de=
+ "d=C3=A9faut de conformit=C3=A9".</li>
+<li style=3D"margin:25px 0;font-family:Roboto, Helvetica Neue, Helvetica, A=
+rial, sans-serif;color:#5f6368;line-height:1.5;font-size:16px"><b>Meilleure=
+ lisibilit=C3=A9</b>&nbsp;: nos conditions d'utilisation restent un documen=
+t juridique, mais nous avons fait notre possible pour en faciliter la compr=
+=C3=A9hension (par exemple, en r=C3=A9organisant certains th=C3=A8mes pour =
+qu'ils soient plus faciles =C3=A0 trouver).</li>
+</ul>
+<p style=3D"margin:25px 0;font-family:Roboto, Helvetica Neue, Helvetica, Ar=
+ial, sans-serif;color:#5f6368;line-height:1.5;font-size:16px">Si vous utili=
+sez Family&nbsp;Link pour g=C3=A9rer le compte Google d'un autre utilisateu=
+r, prenez le temps de lui parler de ces changements.</p>
+<p style=3D"margin:25px 0;font-family:Roboto, Helvetica Neue, Helvetica, Ar=
+ial, sans-serif;color:#5f6368;line-height:1.5;font-size:16px">Merci d'avoir=
+ choisi Google&nbsp;!</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style=3Dpadding:40px>
+<table width=3D100% border=3D0 cellspacing=3D0 cellpadding=3D0 role=3Dprese=
+ntation>
+<tr>
+<td><img src=3Dhttps://www.gstatic.com/s2/oz/images/notifications/ppemail/g=
+s_16q2_welcome_google_logo.png alt=3D"" width=3D100 title=3D""></td>
+</tr>
+<tr>
+<td>
+<p style=3D"margin:25px 0;font-family:Roboto, Helvetica Neue, Helvetica, Ar=
+ial, sans-serif;color:#5f6368;line-height:1.5;font-size:16px">Google&nbsp;I=
+reland Limited, Gordon&nbsp;House, Barrow&nbsp;Street, Dublin&nbsp;4, Irlan=
+de</p>
+<p style=3D"margin:25px 0;font-family:Roboto, Helvetica Neue, Helvetica, Ar=
+ial, sans-serif;color:#5f6368;line-height:1.5;font-size:16px">Nous vous avo=
+ns adress=C3=A9 cet e-mail pour vous informer de modifications importantes =
+apport=C3=A9es aux conditions d'utilisation de Google.</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+
+--0000000000007fb3b105d190469a--
