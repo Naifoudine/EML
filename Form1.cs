@@ -16,10 +16,20 @@ namespace EML
         public Form1()
         {
             InitializeComponent();
+        }
 
-            var fileInfo = new FileInfo("C:\\Users\\wazer\\source\\repos\\EML\\sources\\Mail avec pièce jointe.eml");
-            var eml = MsgReader.Mime.Message.Load(fileInfo);
-            
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Text files (*.eml)|*.eml|All files (*.*)|*.*";
+            string CombinedPath = System.IO.Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sources");
+            openFileDialog.InitialDirectory = System.IO.Path.GetFullPath(CombinedPath);
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                var fileInfo = new FileInfo(openFileDialog.FileName);
+                var eml = MsgReader.Mime.Message.Load(fileInfo);
+                txt_chemin.Text = openFileDialog.FileName;
 
             if (eml.Headers != null)
             {
@@ -30,14 +40,12 @@ namespace EML
                     {
                         var to = recipient.Address;
                         txt_To.Text = to;
-                        
                     }
                 }
                 if (eml.Headers.From != null)
                 {
                     var from = eml.Headers.From;
                     txt_from.Text = from.Address;
-
                 }
             }
 
@@ -53,11 +61,6 @@ namespace EML
                 {
                     var Attachments = eml.Attachments.ToArray();
 
-                    //var filtre = Attachments.Find(Attachments.ContentType.ToString().Contains("image"));
-
-                    //var subset = from theattachment in Attachments where theattachment.FileName = "11";
-
-                    //eml.Attachments.ToArray().;
                     foreach (var attachment in Attachments)
                     {
                         var piece_j = "FileName : " + attachment.FileName + " \r\n";
@@ -74,39 +77,30 @@ namespace EML
                         piece_j += "IsText : " + attachment.IsText + " \r\n";
                         piece_j += "MessageParts : " + attachment.MessageParts + " \r\n";
                         piece_j += "\r\n";
-                        //txt_Img.Text += piece_j;
 
                         if (attachment.ContentType.ToString().Contains("image"))
                         {
-                            txt_Application.Text += piece_j;
+                            var isImage = piece_j;
+                            txt_Img.Text = isImage;
+
+                        }
+                        else if (attachment.ContentType.ToString().Contains("audio"))
+                        {
+                            var isAudio = piece_j;
+                            txt_Audio.Text = isAudio;
+                        }
+                        else if (attachment.ContentType.ToString().Contains("application"))
+                        {
+                            var isAudio = piece_j;
+                            txt_Application.Text = isAudio;
                         }
                         else
                         {
-                            txt_Img.Text = "Y'a rien à voir ici.";
+                            txt_Img.Text = "Il n'y a rien à voir ici !";
+                            txt_Audio.Text = "Il n'y a rien à voir ici !";
+                            txt_Application.Text = "Il n'y a rien à voir ici !";
                         }
-
-                        if (attachment.ContentType.ToString().Contains("audio"))
-                        {
-                            txt_Application.Text += piece_j;
-                        }
-                        else
-                        {
-                            txt_Audio.Text = "Y'a rien à voir ici.";
-                        }
-
-                        if (attachment.ContentType.ToString().Contains("application"))
-                        {
-                            txt_Application.Text += piece_j;
-                        }
-                        else
-                        {
-                            txt_Application.Text = "Y'a rien à voir ici.";
-                        }
-
                     }
-
-
-
                 }
             }
 
@@ -114,11 +108,9 @@ namespace EML
             {
                 var htmlBody = System.Text.Encoding.UTF8.GetString(eml.HtmlBody.Body);
             }
+
+            }
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

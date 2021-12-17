@@ -1,4 +1,4 @@
-Delivered-To: osmopoli8@gmail.com
+Delivered-To: JohnDoe@gmail.com
 Received: by 2002:a6b:dd10:0:0:0:0:0 with SMTP id f16csp5304360ioc;
         Sun, 28 Nov 2021 14:37:10 -0800 (PST)
 X-Received: by 2002:a05:622a:1a0b:: with SMTP id f11mr31305505qtb.454.1638139030647;
@@ -28,7 +28,7 @@ ARC-Authentication-Results: i=1; mx.google.com;
 Return-Path: <3lgSkYQgLCUMst-wjuq33tzyzgj.htrtxrtutqnDlrfnq.htr@scoutcamp.bounces.google.com>
 Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
         by mx.google.com with SMTPS id h5sor14782199qvh.3.2021.11.28.14.37.10
-        for <osmopoli8@gmail.com>
+        for <JohnDoe@gmail.com>
         (Google Transport Security);
         Sun, 28 Nov 2021 14:37:10 -0800 (PST)
 Received-SPF: pass (google.com: domain of 3lgskyqglcumst-wjuq33tzyzgj.htrtxrtutqndlrfnq.htr@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
@@ -72,7 +72,7 @@ X-Notifications-Bounce-Info: AXvZQxezldTWrjZakp6t3WUNLBTw05y3uFxM7BduK9tIi4HzEIe
 Message-ID: <43cce343dce7ff9f4d5cfd6eaf9bd80dd007ed0c-20181855-111050819@google.com>
 Subject: Modifications des conditions d'utilisation de YouTube
 From: YouTube <no-reply@youtube.com>
-To: osmopoli8@gmail.com
+To: JohnDoe@gmail.com
 Content-Type: multipart/alternative; boundary="00000000000001490605d1e0f7db"
 
 --00000000000001490605d1e0f7db

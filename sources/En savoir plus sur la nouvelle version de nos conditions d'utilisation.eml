@@ -1,4 +1,4 @@
-Delivered-To: osmopoli8@gmail.com
+Delivered-To: JohnDoe@gmail.com
 Received: by 2002:a6b:dd10:0:0:0:0:0 with SMTP id f16csp11057958ioc;
         Wed, 24 Nov 2021 14:21:12 -0800 (PST)
 X-Received: by 2002:a05:6638:d0e:: with SMTP id q14mr21179524jaj.12.1637792472102;
@@ -28,7 +28,7 @@ ARC-Authentication-Results: i=1; mx.google.com;
 Return-Path: <317qeYQwKCdoJKNALHU-QPKOCKKCHA.8KIKOIKLKHEeCI6EH.8KI@scoutcamp.bounces.google.com>
 Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
         by mx.google.com with SMTPS id k21sor1558115iow.34.2021.11.24.14.21.11
-        for <osmopoli8@gmail.com>
+        for <JohnDoe@gmail.com>
         (Google Transport Security);
         Wed, 24 Nov 2021 14:21:12 -0800 (PST)
 Received-SPF: pass (google.com: domain of 317qeyqwkcdojknalhu-qpkockkcha.8kikoiklkheeci6eh.8ki@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
@@ -72,7 +72,7 @@ X-Notifications-Bounce-Info: AXvZQxdpNVAgA0ANdY5CkxhrblsJVYM4TXCrSJSBXtyvbPwUPqB
 Message-ID: <3b6d92a727ae06f4a198614d3566168b96b7c453-20183499-111045282@google.com>
 Subject: En savoir plus sur la nouvelle version de nos conditions d'utilisation
 From: Google <noreply-utos@google.com>
-To: osmopoli8@gmail.com
+To: JohnDoe@gmail.com
 Content-Type: multipart/alternative; boundary="0000000000007fb3b105d190469a"
 
 --0000000000007fb3b105d190469a
@@ -176,7 +176,7 @@ right:40px>
 <td><img src=3Dhttps://www.gstatic.com/images/branding/googlelogo/1x/google=
 logo_color_112x36dp.png alt=3D"" title=3D""></td>
 <td align=3Dright style=3D"text-align: end;"><a href=3D# style=3Dtext-decor=
-ation:none;color:#5f6368>osmopoli8@gmail.com</a></td>
+ation:none;color:#5f6368>JohnDoe@gmail.com</a></td>
 </tr>
 </table>
 </td>
@@ -205,10 +205,10 @@ lorsque vous utilisez ces services.</p>
 <p style=3D"margin:25px 0;font-family:Roboto, Helvetica Neue, Helvetica, Ar=
 ial, sans-serif;color:#5f6368;line-height:1.5;font-size:16px">Vous pouvez c=
 onsulter les nouvelles conditions d'utilisation sur <a href=3Dhttps://accou=
-nts.google.com/AccountChooser?Email=3Dosmopoli8@gmail.com&amp;continue=3Dht=
+nts.google.com/AccountChooser?Email=3DJohnDoe@gmail.com&amp;continue=3Dht=
 tps://policies.google.com/terms/update%3Futm_source%3Dtos2022-email%26utm_m=
 edium%3Demail>cette page</a>. Nous fournissons =C3=A9galement un <a href=3D=
-https://accounts.google.com/AccountChooser?Email=3Dosmopoli8@gmail.com&amp;=
+https://accounts.google.com/AccountChooser?Email=3DJohnDoe@gmail.com&amp;=
 continue=3Dhttps://policies.google.com/terms/changes%3Futm_source%3Dtos2022=
 -email%26utm_medium%3Demail>r=C3=A9sum=C3=A9 des principales modifications<=
 /a>. Voici en bref ce que cela change pour vous&nbsp;:</p>

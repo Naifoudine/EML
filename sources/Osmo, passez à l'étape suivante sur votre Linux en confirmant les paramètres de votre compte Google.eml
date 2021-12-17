@@ -1,4 +1,4 @@
-Delivered-To: osmopoli8@gmail.com
+Delivered-To: JohnDoe@gmail.com
 Received: by 2002:a6b:dd10:0:0:0:0:0 with SMTP id f16csp4876683ioc;
         Sun, 28 Nov 2021 06:56:55 -0800 (PST)
 X-Received: by 2002:a05:622a:178c:: with SMTP id s12mr37257691qtk.43.1638111415169;
@@ -28,7 +28,7 @@ ARC-Authentication-Results: i=1; mx.google.com;
 Return-Path: <3t5ijYQ4KCYou22uzs-125s3zCu22uzs.q20260232zwMu0owz.q20@scoutcamp.bounces.google.com>
 Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
         by mx.google.com with SMTPS id o9sor15327118qtw.60.2021.11.28.06.56.55
-        for <osmopoli8@gmail.com>
+        for <JohnDoe@gmail.com>
         (Google Transport Security);
         Sun, 28 Nov 2021 06:56:55 -0800 (PST)
 Received-SPF: pass (google.com: domain of 3t5ijyq4kcyou22uzs-125s3zcu22uzs.q20260232zwmu0owz.q20@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
@@ -74,10 +74,10 @@ List-Id: <b0a8bb4990e841b919666c65f4128d727c412573.google.com>
 X-Notifications: GAMMA:<ed6e87e0be08cace10eae2551063fba8f5427d53-20079894-110945965@google.com>
 X-Notifications-Bounce-Info: AXvZQxcM9nYgGdrkJxFEbIrtbBSrNUXRmNTdEVv-GoGM5iW1KcujWo9hC7kPVKOiu3Ads-40Mwpzi_Y8V5hDTH-CYsEWZk31EjIQg7LX5EO30OIfryBvNFu0p86XwcZMjkdsNqG3UbqJskzdqelDbvtbqKrm9LOv0xhScxaJxEUy_hB6EgGp8Zm5vhss-MpkqfQpgfdWVPnDpe0QsO5tYm6OO6BSMrShKPxD7KZX5jiZvbzNNQnET7rVQgBB7IgqiVrKePvHyZANjAwNjA0MDQxNTM1NTk2OTMzMg
 Message-ID: <ed6e87e0be08cace10eae2551063fba8f5427d53-20079894-110945965@google.com>
-Subject: =?UTF-8?Q?Osmo=2C_passez_=C3=A0_l=27=C3=A9tape_suivante_sur_votre_Linux_en?=
+Subject: =?UTF-8?Q?John=2C_passez_=C3=A0_l=27=C3=A9tape_suivante_sur_votre_Linux_en?=
 	=?UTF-8?Q?_confirmant_les_param=C3=A8tres_de_votre_compte_Google?=
 From: The Google team <google-noreply@google.com>
-To: osmopoli8@gmail.com
+To: JohnDoe@gmail.com
 Content-Type: multipart/alternative; boundary="000000000000fef47c05d1da8864"
 
 --000000000000fef47c05d1da8864
@@ -253,7 +253,7 @@ google_logo_orig.png width=3D88 style=3Dwidth:88px;>
 00%; padding-left:15px; padding-right:15px; font-family:Google Sans, Roboto=
 , San-Francisco, Helvetica, Arial; font-size: 20px; line-height: 30px; colo=
 r: #202124; text-align:center; font-weight:500; background-color: #F8F9FA; =
-direction: ltr; " width=3D100% dir=3Dltr>Bonjour Osmo,</td>
+direction: ltr; " width=3D100% dir=3Dltr>Bonjour John,</td>
 </tr>
 <tr>
 <td class=3Dsubhead_cls style=3D"padding-top:0px; padding-bottom:8px; width=
@@ -571,8 +571,8 @@ Francisco, Helvetica, Arial; font-weight:normal; font-size:12px; line-heigh=
 t:16px; color:#9B9B9B; text-align:center; padding:20px 20px 15px 20px; colo=
 r:#5F6368; line-height: 18px; direction: ltr; background-color:#F8F9FA">
 Cet e-mail a =C3=A9t=C3=A9 envoy=C3=A9 =C3=A0 l&#39;adresse <a href=3Dmailt=
-o:osmopoli8@gmail.com target=3D_blank style=3D"color:#5F6368; text-decorati=
-on:none; font-weight:normal; border:0; ; white-space: nowrap;"> osmopoli8@g=
+o:JohnDoe@gmail.com target=3D_blank style=3D"color:#5F6368; text-decorati=
+on:none; font-weight:normal; border:0; ; white-space: nowrap;"> JohnDoe@g=
 mail.com</a>, car vous vous =C3=AAtes r=C3=A9cemment connect=C3=A9 =C3=A0 v=
 otre compte Google sur votre Linux. Si vous ne souhaitez pas recevoir d&#39=
 ;e-mails pour vous aider =C3=A0 configurer votre nouvel appareil lorsque vo=

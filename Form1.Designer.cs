@@ -41,18 +41,18 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ouvrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txt_msg = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.txt_Img = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.txt_Audio = new System.Windows.Forms.TextBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.txt_Application = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -96,11 +96,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(701, 42);
+            this.button1.Location = new System.Drawing.Point(701, 40);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 5;
+            this.button1.Text = "Ouvrir";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lbl_from
             // 
@@ -168,8 +170,14 @@
             // ouvrirToolStripMenuItem
             // 
             this.ouvrirToolStripMenuItem.Name = "ouvrirToolStripMenuItem";
-            this.ouvrirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ouvrirToolStripMenuItem.Size = new System.Drawing.Size(138, 26);
             this.ouvrirToolStripMenuItem.Text = "Ouvrir";
+            // 
+            // quitterToolStripMenuItem
+            // 
+            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(138, 26);
+            this.quitterToolStripMenuItem.Text = "Quitter";
             // 
             // editionToolStripMenuItem
             // 
@@ -188,14 +196,8 @@
             // aProposToolStripMenuItem
             // 
             this.aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
-            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.aProposToolStripMenuItem.Text = "A Propos";
-            // 
-            // quitterToolStripMenuItem
-            // 
-            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.quitterToolStripMenuItem.Text = "Quitter";
             // 
             // txt_msg
             // 
@@ -231,7 +233,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Text";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // tabPage2
             // 
@@ -243,26 +244,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Image";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.txt_Audio);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(620, 170);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Audio";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.txt_Application);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(620, 170);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Application";
-            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // txt_Img
             // 
@@ -276,6 +257,16 @@
             this.txt_Img.Size = new System.Drawing.Size(608, 158);
             this.txt_Img.TabIndex = 15;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.txt_Audio);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(620, 170);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Audio";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
             // txt_Audio
             // 
             this.txt_Audio.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -287,6 +278,16 @@
             this.txt_Audio.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txt_Audio.Size = new System.Drawing.Size(608, 158);
             this.txt_Audio.TabIndex = 16;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.txt_Application);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(620, 170);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Application";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // txt_Application
             // 
@@ -364,6 +365,7 @@
         private System.Windows.Forms.TextBox txt_Img;
         private System.Windows.Forms.TextBox txt_Audio;
         private System.Windows.Forms.TextBox txt_Application;
+        //private System.Windows.Forms.FileDialog fileBrowserDialog1;
     }
 }
 
