@@ -1,0 +1,36 @@
+Return-Path: <JohnDoe@gmail.com>
+Received: from LAPTOPAAAET11E ([139.26.44.162])
+        by smtp.gmail.com with ESMTPSA id 8sm398028eje.188.2021.12.14.00.40.58
+        for <JohnDoe@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 14 Dec 2021 00:40:59 -0800 (PST)
+Message-ID: <61b8589b.1c69fb81.299c.1226@mx.google.com>
+Date: Tue, 14 Dec 2021 00:40:59 -0800 (PST)
+From: "Microsoft Outlook" <JohnDoe@gmail.com>
+To: <JohnDoe@gmail.com>
+Subject: Message test Microsoft Outlook
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0000_01D7F0E7.D6BFE1D0"
+
+This is a multipart message in MIME format.
+
+------=_NextPart_000_0000_01D7F0E7.D6BFE1D0
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Ce courrier est envoy=C3=A9 automatiquement par Microsoft Outlook dans =
+le cadre de la v=C3=A9rification des param=C3=A8tres de votre compte.
+
+------=_NextPart_000_0000_01D7F0E7.D6BFE1D0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><body><p>Ce courrier est envoy=C3=A9 automatiquement par Microsoft =
+Outlook dans le cadre de la v=C3=A9rification des param=C3=A8tres de =
+votre compte.
+</p></body></html>
+------=_NextPart_000_0000_01D7F0E7.D6BFE1D0--
+
